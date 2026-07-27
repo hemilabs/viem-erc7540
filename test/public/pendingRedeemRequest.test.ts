@@ -1,4 +1,4 @@
-import { PublicClient, zeroAddress } from "viem";
+import { type PublicClient, zeroAddress } from "viem";
 import { readContract } from "viem/actions";
 import { describe, it, expect, vi } from "vitest";
 

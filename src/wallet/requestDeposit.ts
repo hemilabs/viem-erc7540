@@ -1,4 +1,4 @@
-import { type Address, Client, isAddress } from "viem";
+import { type Address, type Client, isAddress } from "viem";
 import { writeContract } from "viem/actions";
 
 import { erc7540Abi } from "../abi.js";
