@@ -1,0 +1,18 @@
+name: JS Checks
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: true
+
+jobs:
+  run-checks-and-tests:
+    uses: hemilabs/.github/.github/workflows/js-checks-pnpm.yml@c1b3c0381dea671b3bc91bdbe08013851c6a6c67
+    with:
+      node-versions: '["24"]'
